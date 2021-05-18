@@ -1,0 +1,25 @@
+echo "imprimir todas los numeros de telefono que tengan una x"
+
+grep -n 'x[[:digit:]]{3}'  grepdata.txt
+
+echo "imprimir los numeros que empiecen con 3 digitos y sigan con un espacio, por las dudes hice con '-' y con espacio en blanco"
+
+grep -n '^[0-9][0-9][0-9]-'  grepdata.txt
+grep -n '^[0-9][0-9][0-9] '  grepdata.txt 
+
+echo "imprime todas las fechas en un rango desde el 2000 al 2021"
+
+grep -n ', [2000-2021]'  grepdata.txt
+
+echo "imprime las palbras seguidas de un caracter y la misma vocal"
+
+grep -E -i '([a][[:alpha:]][a]|[e][[:alpha:]][e]|[i][[:alpha:]][i]|[o][[:alpha:]][o]|[u][[:alpha:]][u])' grepdata.txt
+
+echo "imprime las lineas que no empiezan con S"
+
+grep -v '[S]'  grepdata.txt
+
+ 
+echo "imprime los emails"
+
+grep -n '[@]'  grepdata.txt
